@@ -318,7 +318,7 @@ require('lazy').setup({
       { 'j-hui/fidget.nvim', opts = {} },
 
       -- C# LSP extensions
-	    { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true },
+      { 'Hoffs/omnisharp-extended-lsp.nvim', lazy = true },
 
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',

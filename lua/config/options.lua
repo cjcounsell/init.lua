@@ -79,7 +79,7 @@ vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
 vim.opt.confirm = true
 
 -- Use spaces instead of tabs
@@ -92,5 +92,16 @@ vim.opt.wrap = false
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
+vim.opt.shortmess:append { W = true, I = true, c = true, C = true }
 vim.opt.showmode = false -- Dont show mode since we have a statusline
+
+vim.filetype.add {
+  filename = {
+    ['Tiltfile'] = 'tiltfile',
+  },
+  extension = {
+    ['.tiltfile'] = 'tiltfile',
+  },
+}
+
+vim.treesitter.language.register('starlark', 'tiltfile')

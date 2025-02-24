@@ -21,7 +21,6 @@ return {
         },
       },
     },
-    image = {},
     indent = {},
     input = {},
     lazygit = {

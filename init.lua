@@ -515,6 +515,7 @@ require('lazy').setup({
 
         eslint = {},
         intelephense = {},
+        tailwindcss = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },

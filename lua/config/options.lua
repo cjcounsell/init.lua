@@ -21,3 +21,5 @@ vim.schedule(function()
   end
   vim.opt.clipboard = "unnamedplus"
 end)
+
+vim.opt.formatoptions = "cqlnt" -- tcqj

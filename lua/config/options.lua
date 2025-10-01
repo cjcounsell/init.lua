@@ -26,3 +26,9 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 
 vim.opt.formatoptions = "cqlnt" -- tcqj
+
+vim.filetype.add({
+    filename = {
+        ["Tiltfile"] = "starlark",
+    },
+})

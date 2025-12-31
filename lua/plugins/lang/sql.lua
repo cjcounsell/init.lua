@@ -4,7 +4,7 @@ return {
     opts = {
       linters = {
         sqlfluff = {
-          args = { "lint", "--format=json", "--dialect=tsql" },
+          args = { "lint", "--format=json", "--dialect=tsql", "-" },
         },
       },
     },

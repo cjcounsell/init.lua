@@ -29,7 +29,7 @@ vim.opt.formatoptions = "cqlnt" -- tcqj
 
 vim.filetype.add({
     extension = {
-        Tiltfile = 'starlark'
+        tiltfile = 'starlark'
     },
     filename = {
         ["Tiltfile"] = "starlark",

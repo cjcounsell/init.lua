@@ -6,16 +6,11 @@ vim.g.lazyvim_prettier_needs_config = true
 
 vim.schedule(function()
   if vim.fn.has("wsl") == 1 then
+    local paste_cmd = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))'
     vim.g.clipboard = {
       name = "WslClipboard",
-      copy = {
-        ["+"] = "clip.exe",
-        ["*"] = "clip.exe",
-      },
-      paste = {
-        ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-      },
+      copy = { ["+"] = "clip.exe", ["*"] = "clip.exe" },
+      paste = { ["+"] = paste_cmd, ["*"] = paste_cmd },
       cache_enabled = 0,
     }
   end
@@ -25,7 +20,7 @@ end)
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 
-vim.opt.formatoptions = "cqlnt" -- tcqj
+vim.opt.formatoptions = "tqnjl" -- tcqj
 
 vim.filetype.add({
     extension = {

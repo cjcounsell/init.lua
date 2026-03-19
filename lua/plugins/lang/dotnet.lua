@@ -6,7 +6,7 @@ return {
       local dotnet = require("easy-dotnet")
       dotnet.setup({
         lsp = {
-          enabled = true,
+          enabled = false,
         },
         debugger = {
           bin_path = require("lazyvim.util.root").realpath("~/.local/share/nvim/mason/bin/netcoredbg"),
@@ -20,5 +20,5 @@ return {
   },
 
   -- Disable Omnisharp from LazyVim dotnet extra (using Roslyn LSP from easy-dotnet instead)
-  { "neovim/nvim-lspconfig", opts = { servers = { omnisharp = { enabled = false } } } },
+  { "neovim/nvim-lspconfig", opts = { servers = { omnisharp = { enabled = true } } } },
 }

@@ -4,6 +4,8 @@
 vim.g.autoformat = false
 vim.g.lazyvim_prettier_needs_config = true
 
+vim.o.swf = false
+
 vim.schedule(function()
   if vim.fn.has("wsl") == 1 then
     local paste_cmd = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))'

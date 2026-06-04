@@ -3,6 +3,7 @@ return {
   opts = {
     windows = {
       preview = false,
+      width_focus = 50,
     },
     options = {
       use_as_default_explorer = true,
